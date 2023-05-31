@@ -64,7 +64,7 @@ for (let key in posts){
 const elementContainer = document.querySelector('div#container');
 console.log(elementContainer);
 
-posts.forEach(element => {
+/*posts.forEach(element => {
     elementContainer.innerHTML += 
     `
     <div class="post">
@@ -114,10 +114,10 @@ posts.forEach(element => {
 const likeButton = document.querySelector('a.like-button');
 likeButton.addEventListener('click', function(){
     document.querySelector('a.like-button').classList.add('liked');
-})
+})*/
 
 
-/*
+
     const divPost = generateElement ('div', 'post');
     const divHeader = generateElement ('div', 'post__header');
     const divMeta = generateElement ('div', 'post-meta');
@@ -136,4 +136,4 @@ function generateElement (tagElement, classElement){
     const itemElement = document.createElement(tagElement);
     itemElement.classList.add(classElement);
     return itemElement;
-}*/
+}
