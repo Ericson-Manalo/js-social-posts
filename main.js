@@ -99,7 +99,7 @@ posts.forEach(element => {
                     </a>
                 </div>
                 <div class="likes__counter">
-                    Piace a <b id="like-counter-1" class="js-likes-counter">${element.likes}</b> persone
+                    Piace a <b id="like-counter-${element.id}" class="js-likes-counter">${element.likes}</b> persone
                 </div>
             </div> 
         </div>              
@@ -117,7 +117,7 @@ likeButton.addEventListener('click', function(){
 });
 
 
-
+//provato a creare i div uno per uno
 /*
     const divPost = generateElement ('div', 'post');
     const divHeader = generateElement ('div', 'post__header');
