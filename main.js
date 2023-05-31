@@ -56,15 +56,12 @@ const posts = [
     }
 ];
 
-for (let key in posts){
-    console.log(posts[key]);
-}
 
 
 const elementContainer = document.querySelector('div#container');
 console.log(elementContainer);
 
-/*posts.forEach(element => {
+posts.forEach(element => {
     elementContainer.innerHTML += 
     `
     <div class="post">
@@ -93,7 +90,7 @@ console.log(elementContainer);
         <div class="post__footer">
             <div class="likes js-likes">
                 <div class="likes__cta">
-                    <a class=" js-like-button like-button" href="#" data-postid="1">
+                    <a class=" js-like-button like-button" href="#" data-postid="${element.id}">
                         <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true">
                         </i>
                         <span class="like-button__label">
@@ -108,16 +105,20 @@ console.log(elementContainer);
         </div>              
     </div>
     `
+
 });
 
 
 const likeButton = document.querySelector('a.like-button');
+
+    
 likeButton.addEventListener('click', function(){
-    document.querySelector('a.like-button').classList.add('liked');
-})*/
+    document.querySelector('a.like-button').classList.add('like-button--liked');
+});
 
 
 
+/*
     const divPost = generateElement ('div', 'post');
     const divHeader = generateElement ('div', 'post__header');
     const divMeta = generateElement ('div', 'post-meta');
@@ -127,7 +128,7 @@ likeButton.addEventListener('click', function(){
     divPost.append(divHeader);
     divHeader.append(divMeta);
     
-    
+    */
 
 
 //creo funzioni che mi possa generare l'elemento e la classe
