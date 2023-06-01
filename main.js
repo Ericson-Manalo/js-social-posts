@@ -68,15 +68,15 @@ posts.forEach(element => {
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="${element.image}" alt="Phil Mangione">                 
+                    <img class="profile-pic" src="${element.author.image}" alt="${element.author.name}">                 
                 </div>
                 
                 <div class="post-meta__data">
                     <div class="post-meta__author">
-                        ${element.name}            
+                        ${element.author.name}            
                     </div>
                     <div class="post-meta__time">
-                        4 mesi fa
+                        ${element.created}
                     </div>
                 </div>                    
             </div>
@@ -108,13 +108,18 @@ posts.forEach(element => {
 
 });
 
+//seleziono il bottone del like
+const likeButton = document.querySelectorAll('a.like-button');
+const counter = document.querySelectorAll('b.js-likes-counter');
 
-const likeButton = document.querySelector('a.like-button');
+//ad ogni click sul bottone, viene aggiunta la classe liked, che fa diventare il 'mi piace' di color verde
+likeButton.forEach(element, index => {
+    element.addEventListener('click', function(){
+        element.classList.toggle('like-button--liked');
 
-    
-likeButton.addEventListener('click', function(){
-    document.querySelector('a.like-button').classList.add('like-button--liked');
+    })
 });
+
 
 
 //provato a creare i div uno per uno
